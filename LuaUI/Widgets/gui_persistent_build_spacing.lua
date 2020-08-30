@@ -264,28 +264,28 @@ options = {
     },
     
     show_value_only_on_change = {
-        origname		= ' ..only on spacing change,',
-        type			= 'bool',
-        desc			= "If you don't want to see the above helper until you change the current spacing",
-        noHotkey		= true,
-        OnChange		= function(self)
+        origname        = ' ..only on spacing change,',
+        type            = 'bool',
+        desc            = "If you don't want to see the above helper until you change the current spacing",
+        noHotkey        = true,
+        OnChange        = function(self)
                             showValueOnChange = self.value
                             requestUpdate=options_path
                           end,
-        parents 		= {'show_spacing_value'}
+        parents         = {'show_spacing_value'}
     },
     
     show_time_value = {
-        name			= ' ..within 1 sec.',
-        type			= 'number',
-        min				= 0.1,
-        max				= 5,
-        step			= 0.1,
-        value			= 1,
-        tooltipFunction	= function(self)
+        name            = ' ..within 1 sec.',
+        type            = 'number',
+        min             = 0.1,
+        max             = 5,
+        step            = 0.1,
+        value           = 1,
+        tooltipFunction = function(self)
                             return self.value<5 and round(self.value,1).." sec" or "forever"
                           end,
-        OnChange 		= function(self)
+        OnChange        = function(self)
                             showValueTime = self.value<5 and self.value or huge
                             local str = self.tooltipFunction(self) -- just using the return
                             if str=='forever'
@@ -293,7 +293,7 @@ options = {
                             else self.name = ' ..within '..str..'.' end
                             requestUpdate=options_path
                           end,
-        parents 		= {'show_spacing_value'},
+        parents         = {'show_spacing_value'},
     },
     --
     separator_label = {
