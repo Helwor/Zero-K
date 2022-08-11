@@ -4,7 +4,7 @@ function widget:GetInfo()
 		desc      = "Maintains build spacing between matches",
 		author    = "Niobium & DrHash-, Helwor",
 		date      = "Sep 6, 2011",
-		license   = "GNU GPL, v3 or later",
+		license   = "GNU GPL, v2",
 		layer     = 1,
 		enabled   = true,  --  loaded by default?
 	}
